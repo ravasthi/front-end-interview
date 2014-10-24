@@ -50,6 +50,16 @@ var results = [
     url: "images/search-results/result-09.jpg",
     title: "Title 09",
     date: "21 Sep 2014"
+  },
+  {
+    url: "images/search-results/result-10.jpg",
+    title: "Title 10",
+    date: "21 Sep 2014"
+  },
+  {
+    url: "images/search-results/result-11.jpg",
+    title: "Title 11",
+    date: "21 Sep 2014"
   }
 ];
 
