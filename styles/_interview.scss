@@ -1,0 +1,61 @@
+/*-----[ interview ]------------------------------------------------------------
+| Styles for the interview question.
+*/
+#scratch
+{
+  $button-height: $body-text-size + 2 * $vertical-nudge;
+
+  padding: $section-spacing $gutter-width;
+
+  form.search
+  {
+    .field
+    {
+      text-align: center;
+    }
+
+    input.search-field, button.search
+    {
+      vertical-align: top;
+    }
+
+    input.search-field
+    {
+      @include box-sizing(border-box);
+      @include border-left-radius($button-border-radius);
+      border-color: $light-stroke;
+      padding: ($vertical-nudge - 1) $horizontal-nudge;
+      font-size: $body-text-size;
+      line-height: $body-text-size;
+      width: 40%;
+      height: $button-height;
+
+      @include placeholder-text
+      {
+        line-height: $button-height - 2;
+      }
+    }
+
+    button.search
+    {
+      margin-left: -1px;
+      @include border-left-radius(0);
+      height: $button-height;
+      line-height: $button-height;
+
+      &:before
+      {
+        @include fa-icon(search, $size: $body-text-size, $top: -4px);
+        line-height: $button-height;
+      }
+    }
+  }
+
+  #results
+  {
+    margin-top: $section-spacing;
+  }
+
+  // Insert custom styles here…
+}
+
