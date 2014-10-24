@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
-| scratch.js
+| interview.js
 | application name v1.0
 |
 | file description.
