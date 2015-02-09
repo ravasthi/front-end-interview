@@ -123,10 +123,13 @@ FrontEndInterview.photoSearch = {
       FrontEndInterview.photoSearch.$searchField.val()
     );
 
-    if(searchKeywords.match(/^\s*$/) == null) {
-      FrontEndInterview.photoSearch.searchText = searchKeywords;
-      FrontEndInterview.photoSearch.getImages(searchKeywords);
+    if(searchKeywords.match(/^\s*$/)) {
+      FrontEndInterview.photoSearch.$searchField.val('');
+      return false;
     }
+
+    FrontEndInterview.photoSearch.searchText = searchKeywords;
+    FrontEndInterview.photoSearch.getImages(searchKeywords);
   },
 
   init: function() {
