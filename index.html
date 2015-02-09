@@ -39,15 +39,23 @@
 
   <title>Image search results.</title>
 </head>
-<body id="scratch">
+<body id="photo-search">
   <div class="page">
     <form class="search stacked">
       <div class="field">
         <input type="text" name="search" class="search-field" placeholder="Keywords"
-        /><button class="search" type="button"></button>
+        /><button class="search" type="button"><span class="search-icon"></span><span class="spinner" style="display: none;"></span></button>
       </div> <!-- /.field -->
     </form>
+
+    <div class="alerts">
+
+    </div> <!-- /.alerts -->
+
     <div id="results">
+      <header>
+        <h1>Images matching <span class="search-string">…</span></h1>
+      </header>
     </div> <!-- /#results -->
   </div> <!-- /.page -->
 
@@ -59,7 +67,8 @@
   <script type="text/javascript">
     (function($) {
       $(function() {
-        FiftyfiveExample.commonInit();
+        FrontEndInterview.commonInit();
+        FrontEndInterview.photoSearch.init();
       });
     })(jQuery);
   </script>

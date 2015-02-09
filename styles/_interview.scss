@@ -43,10 +43,22 @@
       height: $button-height;
       line-height: $button-height;
 
-      &:before
+
+      .search-icon:before
       {
         @include fa-icon(search, $size: $body-text-size, $top: -4px);
         line-height: $button-height;
+      }
+
+      .spinner
+      {
+        @include pulse;
+
+        &:before
+        {
+          @include fa-icon(spinner, $size: $body-text-size, $top: -4px);
+          line-height: $button-height;
+        }
       }
     }
   }
@@ -54,6 +66,18 @@
   #results
   {
     margin-top: $section-spacing;
+
+    header
+    {
+      margin-bottom: $section-spacing;
+      text-align: center;
+    }
+
+    .search-string
+    {
+      color: $secondary-text-color;
+      font-style: italic;
+    }
   }
 
   // Insert custom styles here…
