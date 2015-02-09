@@ -65,13 +65,14 @@ var results = [
 
 $.extend(FrontEndInterview.photoSearch, {
   populateResults: function(data) {
-    
+    console.dir(data);
+    // Insert your JS here
   }
 });
 
 (function($) {
   $(function() {
-    // Insert your JS here
+    FrontEndInterview.photoSearch.populateResults(results);
   });
 })(jQuery);
 

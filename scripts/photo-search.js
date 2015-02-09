@@ -5,13 +5,6 @@
 ------------------------------------------------------------------------------*/
 var FrontEndInterview = window.FrontEndInterview ? window.FrontEndInterview : {};
 
-// function called by eval-ing response from Flickr
-function jsonFlickrApi(response) {
-  if(response.stat == 'ok') {
-    FrontEndInterview.photoSearch.populateResults(response);
-  }
-}
-
 FrontEndInterview.photoSearch = {
   flickrApiKey:          '7b491816b7ce18f1f848e52962352ee7',
   flickrRestUrlBase:     'https://www.flickr.com/services/rest/?',
@@ -40,8 +33,9 @@ FrontEndInterview.photoSearch = {
     buildFlickrOptions: function(options) {
       options         = options ? options : {};
 
-      options.format  = 'json';
-      options.api_key = FrontEndInterview.photoSearch.flickrApiKey;
+      options.format         = 'json';
+      options.api_key        = FrontEndInterview.photoSearch.flickrApiKey;
+      options.nojsoncallback = 1;
 
       return options;
     },
@@ -94,7 +88,7 @@ FrontEndInterview.photoSearch = {
       success: function(data, status, xhr) {
         FrontEndInterview.photoSearch.$alerts.html('');
         FrontEndInterview.photoSearch.$searchString.text(FrontEndInterview.photoSearch.searchText);
-        eval(xhr.responseText);
+        FrontEndInterview.photoSearch.populateResults(data);
       },
       error: function(data, status, xhr) {
         FrontEndInterview.photoSearch.$alerts.append(
