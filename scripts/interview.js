@@ -1,9 +1,9 @@
 /*------------------------------------------------------------------------------
 | interview.js
-| application name v1.0
 |
-| file description.
+| Solutions go here.
 ------------------------------------------------------------------------------*/
+var FrontEndInterview = window.FrontEndInterview ? window.FrontEndInterview : {};
 
 var results = [
   {
@@ -11,16 +11,16 @@ var results = [
     title: "Title 01",
     date: "21 Sep 2014"
   },
-  {
-    url: "images/search-results/result-02.jpg",
-    title: "Title 02",
-    date: "21 Sep 2014"
-  },
-  {
-    url: "images/search-results/result-03.jpg",
-    title: "Title 03",
-    date: "21 Sep 2014"
-  },
+  // {
+  //   url: "images/search-results/result-02.jpg",
+  //   title: "Title 02",
+  //   date: "21 Sep 2014"
+  // },
+  // {
+  //   url: "images/search-results/result-03.jpg",
+  //   title: "Title 03",
+  //   date: "21 Sep 2014"
+  // },
   {
     url: "images/search-results/result-04.jpg",
     title: "Title 04",
@@ -62,6 +62,12 @@ var results = [
     date: "21 Sep 2014"
   }
 ];
+
+$.extend(FrontEndInterview.photoSearch, {
+  populateResults: function(data) {
+    
+  }
+});
 
 (function($) {
   $(function() {
