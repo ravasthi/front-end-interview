@@ -1,0 +1,30 @@
+{
+  "name": "front-end-interview",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ravasthi/front-end-interview",
+  "authors": [
+    "Richa Avasthi <ravasthi@gmail.com>"
+  ],
+  "description": "This project contains the boilerplate for a front-end engineer interview question, with several variations and stages so that it can be adapted to interviewees of various skill levels.",
+  "main": "index.html",
+  "keywords": [
+    "interview",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "fiftyfive-util-js": "git@github.com:55minutes/fiftyfive-util-js.git",
+    "font-awesome": "~4.3.0"
+  }
+}

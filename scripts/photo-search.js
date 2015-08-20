@@ -113,7 +113,7 @@ FrontEndInterview.photoSearch = {
   },
 
   doSearch: function(event) {
-    searchKeywords = FrontEndInterview.photoSearch.utils.sanitizeInput(
+    var searchKeywords = FrontEndInterview.photoSearch.utils.sanitizeInput(
       FrontEndInterview.photoSearch.$searchField.val()
     );
 
