@@ -31,7 +31,7 @@ FrontEndInterview.photoSearch = {
     },
 
     buildFlickrOptions: function(options) {
-      options         = options ? options : {};
+      options                = options ? options : {};
 
       options.format         = 'json';
       options.api_key        = FrontEndInterview.photoSearch.flickrApiKey;
