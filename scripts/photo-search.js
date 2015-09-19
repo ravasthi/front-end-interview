@@ -102,7 +102,7 @@ FrontEndInterview.photoSearch = {
   },
 
   checkEnter: function(event) {
-    var characterCode = event.keyCode;
+    var characterCode = event.keyCode || event.which;
 
     if(characterCode == 13) { // if enter key
       FrontEndInterview.photoSearch.doSearch();
